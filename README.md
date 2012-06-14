@@ -1,8 +1,7 @@
 # leiningen.org
 
-Generate static HTML for http://leiningen.org
-
-    $ lein run # will place HTML in public/
+Currently the static HTML from the `public/` dir is used, but this
+could be turned into a site generator at some point.
 
 ## License
 
