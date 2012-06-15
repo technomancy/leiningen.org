@@ -1,194 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Leiningen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="for automating Clojure projects without setting your hair on fire.">
-    <meta name="author" content="Phil Hagelberg and contributors">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
 
-    <link href="http://fonts.googleapis.com/css?family=Galdeano" 
-          rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Neuton:400,700"
-          rel="stylesheet" type="text/css">
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Leiningen</title>
+	<meta name="description" content="Leiningen: automating Clojure projects">
+	<meta name="author" content="Phil Hagelberg and contributors">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" 
+          content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/lein.css">
+    <link rel="stylesheet" href="stylesheets/htmlize.css">
+
     <link href="http://fonts.googleapis.com/css?family=Inconsolata"
-          rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/lein.css" rel="stylesheet">
-    <link href="css/htmlize.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+          rel="stylesheet" type="text/css">	
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="/js/bootstrap-collapse.js"></script>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <!-- TODO: bump text size? make body narrower? new header face? -->
 
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-29778100-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  </head>
+</head>
+<body>
 
-  <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html">Leiningen</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md">Tutorial</a></li>
-              <li><a href="https://github.com/technomancy/leiningen/blob/master/sample.project.clj">Configuration</a></li>
-              <li><a href="reference.html">API Reference</a></li>
-              <li><a href="https://github.com/technomancy/leiningen">Source</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+  <div class="container">
+    <div class="three columns offset-by-one">
+      <img src="img/leiningen.jpg" title="logo" id="logo">
+    </div>
+	<div class="eight columns offset-by-two" id="title">
+	  <h1 class="remove-bottom" style="margin-top: 40px">Leiningen</h1>
+	  <h5>for automating Clojure projects without setting your hair on fire</h5>
+      <nav id="links" class="offset-by-three">
+        <a href="#install">install</a> |
+        <a href="#documentation">documentation</a> |
+        <a href="#community">community</a> |
+        <a href="https://github.com/technomancy/leiningen">source</a>
+      </nav>
     </div>
 
-    <!-- TODO: quit using columns, find new body typeface -->
+    <div class="sixteen columns"><hr /></div>
 
-    <div class="container">
-      <div class="row">
-        <div class="span9">
-          <h1>Leiningen
-            <small>for automating Clojure projects 
-              without setting your hair on fire</small></h1>
-
-          <p id="salespitch">Leiningen offers the easiest way to get
-            started with Clojure. With a focus on project automation
-            and straightforward configuration, it gets out of your way
-            and lets you focus on your code.</p>
-
-          <pre class="htmlize" id="sample-project"><span class="esk-paren">(</span>defproject leiningen.org <span class="string">"1.0.0"</span>
+    <div class="one-third column">
+      <p>Leiningen offers the easiest way to get started with Clojure.
+      With a focus on project automation and straightforward
+      configuration, it gets out of your way and lets you focus on
+        your code.</p>
+    </div>
+    <div class="two-thirds column">
+    <pre class="htmlize" id="sample-project"><span class="esk-paren">(</span>defproject leiningen.org <span class="string">"1.0.0"</span>
   <span class="constant">:description</span> <span class="string">"Generate static HTML for http://leiningen.org"</span>
   <span class="constant">:dependencies</span> [[enlive <span class="string">"1.0.0"</span>]
                  [cheshire <span class="string">"2.2.0"</span>]
                  [org.markdownj/markdownj <span class="string">"0.3.0-1.0.2b4"</span>]]
   <span class="constant">:main</span> leiningen.web<span class="esk-paren">)</span></pre>
+    </div>
 
-          <p>We're proud to announce that Leiningen 2.0.0-preview is
-            out! While we haven't quite made it yet to the
-            final 2.0.0 release, the preview covers most everyday
-            tasks and should be ready for projects that aren't using
-            any of the more obscure features.</p>
+    <div class="sixteen columns"><hr /></div>
 
-            <p>Read <a href="https://github.com/technomancy/leiningen/tree/master/NEWS.md">an
-            overview of what's new</a> and <a href="https://github.com/technomancy/leiningen/wiki/Upgrading">upgrade</a>!</p>
+	<div class="one-third column"><h3 class="offset-by-one">Install</h3></div>
+    <div class="two-thirds column">
+      <a name="install"></a>
+      <p>Leiningen might already be available
+        in <a href="https://github.com/technomancy/leiningen/wiki/Packaging">your
+          preferred package manager</a>. If not, or if you want a
+        newer version it's still easy to install the old-fashioned
+        way.</p>
 
-        </div>
-        <div class="span3">
-          <img src="img/leiningen.jpg" alt="Leiningen">
-        </div>
-      </div>
+      <ol>
+        <li><a href="https://raw.github.com/technomancy/leiningen/preview/bin/lein">Download the <kbd>lein</kbd> script</a></li>
+        <li>Place it on your <tt>$PATH</tt> (eg. <tt>~/bin</tt>)</li>
+        <li>Set it to be executable. (<kbd>chmod 755 ~/bin/lein</kbd>)</li>
+      </ol>
 
-      <div class="row">
-        <div class="span4">
-          <h2>Install</h2>
-          <p>Leiningen might already be available
-            in <a href="https://github.com/technomancy/leiningen/wiki/Packaging">your
-              preferred package manager</a>. If not, or if you want a
-            newer version it's still easy to install the old-fashioned
-            way.</p>
+      <p>The link above will get you the 2.x preview release.
+        There is still a lot of extant material on the Web
+        concerning the older
+        <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein">Leiningen
+          1.x</a> version, which is still available if you need to work on older
+        projects that aren't compatible with 2.x yet. The
+        <a href="https://github.com/technomancy/leiningen/wiki/Upgrading">upgrade
+          guide</a> has instructions on migrating to version 2.</p>
 
-          <ol>
-            <li><a href="https://raw.github.com/technomancy/leiningen/preview/bin/lein">Download the <kbd>lein</kbd> script</a></li>
-            <li>Place it on your <tt>$PATH</tt> (eg. <tt>~/bin</tt>)</li>
-            <li>Set it to be executable. (<kbd>chmod 755 ~/bin/lein</kbd>)</li>
-          </ol>
+      <p>On Windows most users can get
+        <a href="https://raw.github.com/technomancy/leiningen/preview/bin/lein.bat">the batch file</a>
+        If you have wget.exe or curl.exe already installed and in PATH, you
+        can just run `lein self-install`, otherwise get the standalone jar from the
+        <a href="https://github.com/technomancy/leiningen/downloads">downloads
+          page</a>. If you
+        have <a href="http://www.cygwin.com/">Cygwin</a> you
+        should be able to use the shell script above rather than
+        the batch file.</p>
+	</div>
 
-          <p>The link above will get you the 2.x preview release.
-            There is still a lot of extant material on the Web
-            concerning the older
-            <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein">Leiningen
-              1.x</a> version, which is still available if you need to work on older
-            projects that aren't compatible with 2.x yet. The
-            <a href="https://github.com/technomancy/leiningen/wiki/Upgrading">upgrade
-            guide</a> has instructions on migrating to version 2.</p>
+    <div class="sixteen columns"><hr /></div>
 
-          <p>On Windows most users can get
-            <a href="https://raw.github.com/technomancy/leiningen/preview/bin/lein.bat">the batch file</a>
-            If you have wget.exe or curl.exe already installed and in PATH, you
-            can just run `lein self-install`, otherwise get the standalone jar from the
-            <a href="https://github.com/technomancy/leiningen/downloads">downloads
-            page</a>. If you
-            have <a href="http://www.cygwin.com/">Cygwin</a> you
-            should be able to use the shell script above rather than
-            the batch file.</p>
+	<div class="one-third column" style="float: right">
+      <h3 class="offset-by-one">Documentation</h3></div>
 
-          <p>If you have an older version of Leiningen already
-            installed, you can upgrade to the latest stable version
-            with <kbd>lein upgrade</kbd>, but it will not pull in
-            version 2 until the final release.</p>
-        </div>
+	<div class="two-thirds column">
+      <a name="documentation"></a>
+	  <p>The <a href="https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md">tutorial</a>
+        is the best place to start. If you have Leiningen
+        installed, you can read the tutorial by
+        running <kbd>lein help tutorial</kbd>.</p>
 
-        <div class="span8">
-          <h2>Documentation</h2>
-          
-          <p>The <a href="https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md">tutorial</a>
-              is the best place to start. If you have Leiningen
-              installed, you can read the tutorial by
-              running <kbd>lein help tutorial</kbd>.</p>
+      <p>There is
+        a <a href="https://github.com/technomancy/leiningen/blob/master/doc/FAQ.md">FAQ</a>
+        available via <kbd>lein help faq</kbd>. Documentation for each
+        individual task is available via <kbd>lein help $TASK</kbd>.
+        You can also
+        see <a href="https://github.com/technomancy/leiningen/blob/master/sample.project.clj">the
+        sample <tt>project.clj</tt> file</a> with a reference of all
+        project settings by running <kbd>lein help sample</kbd>.</p>
 
-          <p>The <a href="https://github.com/technomancy/leiningen/blob/master/README.md">readme</a>
-            has more details for getting started and is available
-            via <kbd>lein help readme</kbd>. Documentation for each
-            individual task is available via <kbd>lein help
-            $TASK</kbd>. You can also
-            see <a href="https://github.com/technomancy/leiningen/blob/master/sample.project.clj">the
-            sample <tt>project.clj</tt> file</a> with a reference of
-            all project settings by running <kbd>lein help
-            sample</kbd>.
+      <p>Other guides
+      include 
+        <a href="https://github.com/technomancy/leiningen/blob/master/doc/PROFILES.md">profiles</a>,
+        <a href="https://github.com/technomancy/leiningen/blob/master/doc/PLUGINS.md">writing
+          plugins</a> and
+        <a href="https://github.com/technomancy/leiningen/blob/master/doc/DEPLOY.md">deploying
+          libraries</a>. There is <a href="https://github.com/technomancy/leiningen/wiki/Plugins">a list of plugins</a>
+        on the wiki. Those interested in
+        using <tt>leiningen-core</tt> as a library should read
+        <a href="reference.html">the API reference</a>.</p>
+	</div>
 
-          <p>Other guides include <a href="https://github.com/technomancy/leiningen/blob/master/doc/PLUGINS.md">writing plugins</a> and
-          <a href="https://github.com/technomancy/leiningen/blob/master/doc/DEPLOY.md">deploying
-            libraries</a>. There is <a href="https://github.com/technomancy/leiningen/wiki/Plugins">a list of plugins</a>
-            on the wiki. Those interested in
-            using <tt>leiningen-core</tt> as a library should read
-          <a href="reference.html">the API reference</a>.</p>
-        </div>
+    <div class="sixteen columns"><hr /></div>
 
-        <div class="span8">
-          <h2>Community</h2>
+	<div class="one-third column"><h3 class="offset-by-one">Community</h3></div>
+	<div class="two-thirds column">
+      <a name="community"></a>
+      <p>Leiningen is the most active open-source Clojure project. We
+        welcome potential contributors and do our best to try to
+        make it easy to help out.</p>
 
-          <p>Leiningen is the most active open-source Clojure
-            project. We welcome potential contributors and do our
-            best to try to make it easy to help out.</p>
+      <p>Discussion occurs on
+        the <a href="http://groups.google.com/group/leiningen">mailing
+        list</a> and <a href="irc://chat.freenode.net#leiningen">in
+        the #leiningen channel on Freenode</a>, while issues should
+        be <a href="https://github.com/technomancy/leiningen/issues">reported
+        on the Github issue tracker</a>. Simpler issues appropriate
+        for first-time contributors looking to help out
+        are <a href="https://github.com/technomancy/leiningen/issues?labels=Newbie&state=open">tagged
+        "newbie"</a>.</p>
 
-          <p>Discussion occurs on
-            the <a href="http://groups.google.com/group/leiningen">mailing
-            list</a>
-            and <a href="irc://chat.freenode.net#leiningen">in the
-            #leiningen channel on Freenode</a>, while issues should
-            be <a href="https://github.com/technomancy/leiningen/issues">reported
-            on the Github issue tracker</a>.</p>
+      <p>Contributors who have had a single patch accepted may request
+        commit rights on the mailing list or in IRC as well as a free
+        sticker.</p>
+	</div>
 
-          <p>Contributors who have had a single patch accepted may
-            request commit rights on the mailing list or in IRC as
-            well as a free sticker.</p>
-        </div>
-      </div>
+    <div class="sixteen columns"><hr /></div>
 
-      <hr>
-
-      <footer>
+    <div class="sixteen columns" id="footer">
         <p>&copy; 2012 Phil Hagelberg
         and <a href="https://github.com/technomancy/leiningen/contributors">contributors</a>.
         Licensed under
@@ -196,8 +173,10 @@
         1.0</a>. See the code
         for <a href="https://github.com/technomancy/leiningen.org">this
         site</a>.</p>
-      </footer>
+    </div>
+	</div><!-- container -->
 
-    </div> <!-- /container -->
-  </body>
+<!-- End Document
+================================================== -->
+</body>
 </html>
