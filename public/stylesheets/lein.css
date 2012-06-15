@@ -1,9 +1,28 @@
 body {
+    font-size: 16px;
     padding: 50px 0 200px 0;
 }
 
+#title h1 {
+    font-size: 54px;
+}
+
+#title h5 {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 10px 50px 0 10px;
+    color: #444;
+}
+
 nav#links {
-    margin-top: 149px;
+    font-size: 20px;
+    margin-top: 140px;
+    margin-left: -20px;
+    line-height: 32px;
+}
+
+nav#links a {
+    font-size: 22px;
 }
 
 /* nav#links > a { float: left; }  */
@@ -33,4 +52,38 @@ h3 {
 
 #footer p {
     text-align: center;
+}
+
+@media only screen and (max-width: 959px) {
+    #title h5 {
+        font-size: 20px;
+        margin: 10px 60px 0 10px;
+    }
+    nav#links {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px) {
+  nav#links {
+      font-size: 15px;
+      margin-left: -30px;
+  }
+  nav#links a {
+      font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  #title h5 {
+      font-size: 20px;
+      margin: 10px 40px 0 10px;
+  }
+  nav#links {
+      font-size: 20px;
+      margin-left: 10px;
+  }
+  nav#links a {
+      font-size: 22px;
+  }
 }
