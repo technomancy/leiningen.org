@@ -27,12 +27,24 @@
 
     <link href="http://fonts.googleapis.com/css?family=Inconsolata"
           rel="stylesheet" type="text/css">	
+    <link href="http://fonts.googleapis.com/css?family=Bitter"
+          rel="stylesheet" type="text/css">
 
     <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
     <!-- TODO: bump text size? make body narrower? new header face? -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29778100-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
 </head>
 <body>
@@ -43,7 +55,7 @@
     </div>
 	<div class="eight columns offset-by-two" id="title">
 	  <h1 class="remove-bottom" style="margin-top: 40px">Leiningen</h1>
-	  <h5>for automating Clojure projects without setting your hair on fire</h5>
+	  <h6>for automating Clojure projects without setting your hair on fire</h6>
       <nav id="links" class="offset-by-three">
         <a href="#install">install</a> |
         <a href="#documentation">documentation</a> |
@@ -55,16 +67,16 @@
     <div class="sixteen columns"><hr /></div>
 
     <div class="one-third column">
-      <p>Leiningen offers the easiest way to get started with Clojure.
-      With a focus on project automation and straightforward
-      configuration, it gets out of your way and lets you focus on
-        your code.</p>
+      <p id="pitch">Leiningen offers <strong>the easiest way to get
+      started with Clojure</strong>. With a focus on project
+      automation and straightforward configuration, it gets out of
+      your way and lets you focus on your code.</p>
     </div>
     <div class="two-thirds column">
     <pre class="htmlize" id="sample-project"><span class="esk-paren">(</span>defproject leiningen.org <span class="string">"1.0.0"</span>
   <span class="constant">:description</span> <span class="string">"Generate static HTML for http://leiningen.org"</span>
-  <span class="constant">:dependencies</span> [[enlive <span class="string">"1.0.0"</span>]
-                 [cheshire <span class="string">"2.2.0"</span>]
+  <span class="constant">:dependencies</span> [[enlive <span class="string">"1.0.1"</span>]
+                 [cheshire <span class="string">"4.0.0"</span>]
                  [org.markdownj/markdownj <span class="string">"0.3.0-1.0.2b4"</span>]]
   <span class="constant">:main</span> leiningen.web<span class="esk-paren">)</span></pre>
     </div>
@@ -76,19 +88,18 @@
       <a name="install"></a>
       <p>Leiningen might already be available
         in <a href="https://github.com/technomancy/leiningen/wiki/Packaging">your
-          preferred package manager</a>. If not, or if you want a
-        newer version it's still easy to install the old-fashioned
-        way.</p>
+        preferred package manager</a>. If you want a newer version
+        it's still easy to install the old-fashioned way:</p>
 
       <ol>
         <li><a href="https://raw.github.com/technomancy/leiningen/preview/bin/lein">Download the <kbd>lein</kbd> script</a></li>
         <li>Place it on your <tt>$PATH</tt> (eg. <tt>~/bin</tt>)</li>
-        <li>Set it to be executable. (<kbd>chmod 755 ~/bin/lein</kbd>)</li>
+        <li>Set it to be executable. (<kbd>chmod a+x ~/bin/lein</kbd>)</li>
       </ol>
 
-      <p>The link above will get you the 2.x preview release.
-        There is still a lot of extant material on the Web
-        concerning the older
+      <p>The link above will get you the 2.x preview release, which is
+        recommended. There is still a fair bit of extant material on the
+        Web concerning the older
         <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein">Leiningen
           1.x</a> version, which is still available if you need to work on older
         projects that aren't compatible with 2.x yet. The
@@ -134,8 +145,8 @@
           plugins</a> and
         <a href="https://github.com/technomancy/leiningen/blob/master/doc/DEPLOY.md">deploying
           libraries</a>. There is <a href="https://github.com/technomancy/leiningen/wiki/Plugins">a list of plugins</a>
-        on the wiki. Those interested in
-        using <tt>leiningen-core</tt> as a library should read
+        on the wiki. Plugin authors or those
+        using <tt>leiningen-core</tt> as a library may read
         <a href="reference.html">the API reference</a>.</p>
 	</div>
 
@@ -149,7 +160,7 @@
         make it easy to help out.</p>
 
       <p>Discussion occurs on
-        the <a href="http://groups.google.com/group/leiningen">mailing
+        the <a href="http://librelist.com/browser/leiningen/">mailing
         list</a> and <a href="irc://chat.freenode.net#leiningen">in
         the #leiningen channel on Freenode</a>, while issues should
         be <a href="https://github.com/technomancy/leiningen/issues">reported

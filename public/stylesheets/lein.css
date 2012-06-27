@@ -2,6 +2,11 @@ body {
     padding: 50px 0 200px 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bitter", serif;
+    font-weight: 400;
+}
+
 nav#links {
     margin-top: 149px;
 }
@@ -13,6 +18,10 @@ p {
     text-align: justify;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
+}
+
+p#pitch {
+    text-align: left;
 }
 
 pre, tt, kbd, code {
