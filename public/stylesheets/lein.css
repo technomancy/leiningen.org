@@ -14,6 +14,21 @@ nav#links {
 /* nav#links > a { float: left; }  */
 /* nav#links > a + a:before { display: block; float: left; content: ' | '; } */
 
+.constant {
+ color: #25536D;
+}
+
+a, a:visited {
+  color: #25536D;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+a:hover, a:focus {
+ color: black;
+}
+
+
 p {
     text-align: justify;
     -webkit-hyphens: auto;
