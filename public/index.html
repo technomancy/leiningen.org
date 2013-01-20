@@ -61,7 +61,7 @@
 	  <h6>for automating Clojure projects without setting your hair on fire</h6>
       <nav id="links" class="offset-by-three">
         <a href="#install">install</a> |
-        <a href="#documentation">documentation</a> |
+        <a href="#docs">docs</a> |
         <a href="#community">community</a> |
         <a href="https://github.com/technomancy/leiningen">source</a>
       </nav>
@@ -89,13 +89,12 @@
 	<div class="one-third column"><h3 class="offset-by-one">Install</h3></div>
     <div class="two-thirds column">
       <a name="install"></a>
-      <p>Leiningen might already be available
-        in <a href="https://github.com/technomancy/leiningen/wiki/Packaging">your
-        package manager</a>. If you want a newer version it's still
-        easy to install the old-fashioned way:</p>
+      <p>It's easy to install by hand. You can check
+        your <a href="https://github.com/technomancy/leiningen/wiki/Packaging">package
+          manager</a> as well, but we strongly recommend version 2.x.</p>
 
       <ol>
-        <li><a href="https://raw.github.com/technomancy/leiningen/preview/bin/lein">Download the <kbd>lein</kbd> script</a></li>
+        <li><a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein">Download the <kbd>lein</kbd> script</a></li>
         <li>Place it on your <tt>$PATH</tt> (eg. <tt>~/bin</tt>)</li>
         <li>Set it to be executable. (<kbd>chmod a+x ~/bin/lein</kbd>)</li>
       </ol>
@@ -122,23 +121,23 @@
       <h3 class="offset-by-one">Documentation</h3></div>
 
 	<div class="two-thirds column">
-      <a name="documentation"></a>
-	  <p>The <a href="https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md">tutorial</a>
+      <a name="docs"></a>
+	  <p>The <a href="https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md">tutorial</a>
         is the best place to start. If you have Leiningen
         installed, you can read the tutorial by running <kbd>lein help tutorial</kbd>.</p>
 
       <p>Running <kbd>lein help faq</kbd> will get you the
-        <a href="https://github.com/technomancy/leiningen/blob/master/doc/FAQ.md">FAQ</a>.
+        <a href="https://github.com/technomancy/leiningen/blob/stable/doc/FAQ.md">FAQ</a>.
         Documentation for each individual task is available
         via <kbd>lein help $TASK</kbd>. You can also
-        see <a href="https://github.com/technomancy/leiningen/blob/master/sample.project.clj">the
+        see <a href="https://github.com/technomancy/leiningen/blob/stable/sample.project.clj">the
         sample <tt>project.clj</tt> file</a> with a reference of all
         project settings by running <kbd>lein help sample</kbd>.</p>
 
       <p>More:
-        <a href="https://github.com/technomancy/leiningen/blob/master/doc/PROFILES.md">profiles guide</a> |
-        <a href="https://github.com/technomancy/leiningen/blob/master/doc/PLUGINS.md">writing plugins</a> |
-        <a href="https://github.com/technomancy/leiningen/blob/master/doc/DEPLOY.md">deploying libraries</a> |
+        <a href="https://github.com/technomancy/leiningen/blob/stable/doc/PROFILES.md">profiles</a> |
+        <a href="https://github.com/technomancy/leiningen/blob/stable/doc/DEPLOY.md">deploying libraries</a> |
+        <a href="https://github.com/technomancy/leiningen/blob/stable/doc/PLUGINS.md">writing plugins</a> |
         <a href="https://github.com/technomancy/leiningen/wiki/Plugins">plugin list</a> |
         <a href="reference.html">API reference</a>
       </p>
@@ -157,8 +156,9 @@
         the #leiningen channel on Freenode</a>, but there is also a
         <a href="http://librelist.com/browser/leiningen">mailing
         list</a>. To join the mailing list, email
-        leiningen@librelist.org. The same address is used for posting
-        once you've joined. Issues should
+        <a href="mailto:leiningen@librelist.org">leiningen@librelist.org</a>.
+        The same address is used for posting once you've joined.
+        Issues should
         be <a href="https://github.com/technomancy/leiningen/issues">reported
         on the GitHub issue tracker</a>. Simpler issues appropriate
         for first-time contributors looking to help out
@@ -173,10 +173,10 @@
     <div class="sixteen columns"><hr /></div>
 
     <div class="sixteen columns" id="footer">
-        <p>&copy; 2012 Phil Hagelberg
+        <p>&copy; 2012-2013 Phil Hagelberg
         and <a href="https://github.com/technomancy/leiningen/contributors">contributors</a>.
         Licensed under
-        the <a href="https://github.com/technomancy/leiningen/blob/master/COPYING">EPL
+        the <a href="https://github.com/technomancy/leiningen/blob/stable/COPYING">EPL
         1.0</a>. See the code
         for <a href="https://github.com/technomancy/leiningen.org">this
         site</a>.</p>
