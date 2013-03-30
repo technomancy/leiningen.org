@@ -45,10 +45,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-
-    <script type="text/javascript">
-      window.onload = function () { document.getElementById("windows").style.display = 'none'; };
-    </script>
 </head>
 <body>
 
@@ -70,10 +66,10 @@
     <div class="sixteen columns"><hr /></div>
 
     <div class="one-third column">
-      <p id="pitch">Leiningen offers <strong>the easiest way to use
-      Clojure</strong>. With a focus on project automation and
-      declarative configuration, it gets out of your way and lets you
-      focus on your code.</p>
+      <p id="pitch">Leiningen is <strong>the easiest way to use
+      <a href="http://clojure.org">Clojure</a></strong>. With a focus
+      on project automation and declarative configuration, it gets out
+      of your way and lets you focus on your code.</p>
     </div>
     <div class="two-thirds column">
     <pre class="htmlize" id="sample-project"><span class="esk-paren">(</span>defproject leiningen.org <span class="string">"1.0.0"</span>
@@ -89,27 +85,22 @@
 	<div class="one-third column"><h3 class="offset-by-one">Install</h3></div>
     <div class="two-thirds column">
       <a name="install"></a>
-      <p>It's easy to install by hand. You can check
-        your <a href="https://github.com/technomancy/leiningen/wiki/Packaging">package
-          manager</a> as well, but we strongly recommend version 2.x.</p>
+      <p>It's easy to install by hand:</p>
 
       <ol>
-        <li><a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein">Download the <kbd>lein</kbd> script</a></li>
-        <li>Place it on your <tt>$PATH</tt> (eg. <tt>~/bin</tt>)</li>
-        <li>Set it to be executable. (<kbd>chmod a+x ~/bin/lein</kbd>)</li>
+        <li>Download the <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein"><kbd>lein</kbd>
+        script</a> (or on
+          Windows <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein.bat"><kbd>lein.bat</kbd></a>)</li>
+        <li>Place it on your <tt>$PATH</tt> where your shell can find it (eg. <tt>~/bin</tt>)</li>
+        <li>Set it to be executable (<kbd>chmod a+x ~/bin/lein</kbd>)</li>
       </ol>
 
-      <p><a href="https://github.com/technomancy/leiningen/wiki/Upgrading">Still
-          on 1.x?</a> |
-        <a onclick="document.getElementById('windows').style.display = ''"
-           href="javascript:;">Using Windows?</a></p>
-
-      <p id="windows">On Windows most users can get
-        <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein.bat">the
-        batch file</a> and run <kbd>lein self-install</kbd>. If you
-        have <a href="http://www.cygwin.com/">Cygwin</a> you
-        should be able to use the shell script above rather than
-        the batch file.</p>
+      <p>You can check
+        your <a href="https://github.com/technomancy/leiningen/wiki/Packaging">package
+        manager</a> as well, but we strongly recommend version 2.x.
+        (Read
+        about <a href="https://github.com/technomancy/leiningen/wiki/Upgrading">upgrading
+        from 1.x</a>.)</p>
 	</div>
 
     <div class="sixteen columns"><hr /></div>
@@ -166,6 +157,10 @@
         for first-time contributors looking to help out
         are <a href="https://github.com/technomancy/leiningen/issues?labels=Newbie&state=open">tagged
         "newbie"</a>.</p>
+
+      <p>Periodically the community is surveyed.
+        <a href="https://lein-survey-2013.herokuapp.com/results">The
+          latest edition</a> recently had its results published.</p>
 
       <p>Contributors who have had a single patch accepted may request
         commit rights on the mailing list or in IRC as well as a free
