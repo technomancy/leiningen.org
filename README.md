@@ -5,6 +5,6 @@ could be turned into a site generator at some point.
 
 ## License
 
-Copyright © 2012-2016 Phil Hagelberg
+Copyright © 2012-2017 Phil Hagelberg
 
 Distributed under the Eclipse Public License, the same as Clojure.
