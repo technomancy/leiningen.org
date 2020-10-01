@@ -1,7 +1,6 @@
 # leiningen.org
 
-Currently the static HTML from the `public/` dir is used, but this
-could be turned into a site generator at some point.
+Moved to the main leiningen repo.
 
 ## License
 
